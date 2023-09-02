@@ -2,10 +2,11 @@ import pytest
 from utils import mask_from, mask_to, change_format_data
 
 
-***тесты***
+
 
 def test_mask_from():
     assert mask_from("Visa Gold 5999414228426353") == "Visa Gold 5999 41** **** 6353"
+    assert mask_from("Maestro 1596837868705199") == "Maestro 1596 83** **** 5199"
 
 
 def test_mask_to():
